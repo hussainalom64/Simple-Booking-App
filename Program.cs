@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace HolidayApp
 {
@@ -49,7 +49,7 @@ namespace HolidayApp
             customerID = lastName + "_" + houseNo + "_" + postCode;
             Console.WriteLine("Your customer ID is " + customerID);
 
-            city = CityMenu();
+            option = CityMenu();
             /*Console.WriteLine("Cities avaiable for booking are: ");
             Console.WriteLine("1. Paris");
             Console.WriteLine("2. Madrid");
@@ -57,9 +57,9 @@ namespace HolidayApp
             Console.WriteLine("4. Bonn");
             Console.WriteLine("Please enter 1, 2, 3, 4");
             */
-            city = Convert.ToInt32(Console.ReadLine());
+            //city = Convert.ToInt32(Console.ReadLine());
 
-            switch(city)
+            switch(option)
             {
                 case 1:
                     Console.WriteLine("The travel cost is £80");
@@ -101,10 +101,10 @@ namespace HolidayApp
                 Console.WriteLine("Please enter either y or n!");
             }
             accomodationCost = numberOfNights * 40;
-            Console.WriteLine("Your accomdation cost is " + accomodationCost);
+            Console.WriteLine("Your accomdation cost is £" + accomodationCost);
 
             totalCost = travelCost + accomodationCost + insurance;
-            Console.WriteLine("This is your total cost " + totalCost);
+            Console.WriteLine("This is your total cost £" + totalCost);
 
         }
     }
